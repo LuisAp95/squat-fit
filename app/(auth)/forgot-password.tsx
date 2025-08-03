@@ -1,8 +1,7 @@
 
-import { View, Text, TextInput, Pressable, Alert } from 'react-native';
-import { useRouter } from 'expo-router';
 import { Image } from 'expo-image';
-
+import { useRouter } from 'expo-router';
+import { Alert, Pressable, Text, TextInput, View } from 'react-native';
 export default function ForgotPassword() {
   const router = useRouter();
 
@@ -32,7 +31,7 @@ export default function ForgotPassword() {
 
       <View className="items-center">
         <Image
-          source={require('../../../assets/images/logo.png')}
+          source={require('../../assets/images/logo.png')}
           className="w-32 h-32"
           contentFit="contain"
         />

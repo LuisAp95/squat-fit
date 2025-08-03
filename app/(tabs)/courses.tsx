@@ -1,8 +1,8 @@
 
-import { View, Text, ScrollView, Pressable } from 'react-native';
 import { Image } from 'expo-image';
 import { useRouter } from 'expo-router';
-import { CourseCard } from '../../components/CourseCard';
+import { Pressable, ScrollView, Text, View } from 'react-native';
+import { CourseCard } from '../components/CourseCard';
 
 // Datos simulados
 const myFirstCourse = {

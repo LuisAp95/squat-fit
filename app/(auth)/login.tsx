@@ -1,8 +1,8 @@
-import { View, Text, TextInput, Pressable, StyleSheet, Platform } from 'react-native';
-import { useAuth } from '../../context/AuthContext';
 import { Image } from 'expo-image';
-import { SvgXml } from 'react-native-svg';
 import { useRouter } from 'expo-router';
+import { Platform, Pressable, Text, TextInput, View } from 'react-native';
+import { SvgXml } from 'react-native-svg';
+import { useAuth } from '../context/AuthContext';
 
 // Contenido de los archivos SVG
 const googleSvg = `
@@ -28,7 +28,7 @@ export default function Login() {
     <View className="flex-1 bg-white p-4 justify-center">
       <View className="items-center">
         <Image
-          source={require('../../../assets/images/logo.png')}
+          source={require('../../assets/images/logo.png')}
           className="w-32 h-32"
           contentFit="contain"
         />

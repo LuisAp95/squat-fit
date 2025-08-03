@@ -1,10 +1,10 @@
 
-import { View, Text, TextInput, Pressable, Platform, ScrollView } from 'react-native';
-import { useAuth } from '../../context/AuthContext';
 import { Image } from 'expo-image';
-import { SvgXml } from 'react-native-svg';
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
+import { Platform, Pressable, ScrollView, Text, TextInput, View } from 'react-native';
+import { SvgXml } from 'react-native-svg';
+import { useAuth } from '../context/AuthContext';
 
 // Contenido de los archivos SVG (reutilizado de la pantalla de login)
 const googleSvg = `
@@ -44,7 +44,7 @@ export default function Register() {
     <ScrollView className="flex-1 bg-white" contentContainerStyle={{ padding: 16, justifyContent: 'center' }}>
       <View className="items-center mt-10">
         <Image
-          source={require('../../../assets/images/logo.png')}
+          source={require('../../assets/images/logo.png')}
           className="w-32 h-32"
           contentFit="contain"
         />

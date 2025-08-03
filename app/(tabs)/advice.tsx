@@ -1,8 +1,8 @@
 
-import { useState } from 'react';
-import { View, Text, ScrollView, Pressable, Switch } from 'react-native';
-import { AdvisorCard } from '../../components/AdvisorCard';
 import { Image } from 'expo-image';
+import { useState } from 'react';
+import { Pressable, ScrollView, Switch, Text, View } from 'react-native';
+import { AdvisorCard } from '../components/AdvisorCard'; // Asegúrate de tener este componente creado
 
 // Datos simulados
 const availableAdvisors = [

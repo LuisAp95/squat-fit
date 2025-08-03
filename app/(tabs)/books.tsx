@@ -1,6 +1,6 @@
 
-import { View, Text, ScrollView } from 'react-native';
-import { BookCard } from '../../components/BookCard';
+import { ScrollView, Text, View } from 'react-native';
+import { BookCard } from '../components/BookCard';
 
 // Datos simulados
 const myBooks = [

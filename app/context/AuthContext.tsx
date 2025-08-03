@@ -24,10 +24,22 @@ export function useAuth() {
 // Componente proveedor de autenticación
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<any>(null); // Simula el estado del usuario
+  const [isLoading, setIsLoading] = useState(true); // Estado de carga inicial
   const router = useRouter();
   const segments = useSegments();
 
   useEffect(() => {
+    // Delay inicial para asegurar que el router esté montado
+    const timeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 100);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  useEffect(() => {
+    if (isLoading) return; // No navegar si aún está cargando
+
     const inAuthGroup = segments[0] === '(auth)';
 
     // Si el usuario no está autenticado y no está en el grupo de autenticación,
@@ -40,7 +52,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     else if (user && inAuthGroup) {
       router.replace('/home');
     }
-  }, [user, segments, router]);
+  }, [user, segments, router, isLoading]);
 
   const signIn = () => {
     // Lógica de inicio de sesión (simulada)
@@ -52,9 +64,21 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setUser(null);
   };
 
+  // Mostrar loading mientras se inicializa
+  if (isLoading) {
+    return (
+      <AuthContext.Provider value={{ user, signIn, signOut }}>
+        {children}
+      </AuthContext.Provider>
+    );
+  }
+
   return (
     <AuthContext.Provider value={{ user, signIn, signOut }}>
       {children}
     </AuthContext.Provider>
   );
 }
+
+// Exportación por defecto para evitar que Expo Router lo trate como ruta
+export default AuthProvider;
