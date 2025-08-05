@@ -14,13 +14,13 @@ const myBooks = [
     id: '2',
     title: 'Anatomía del Ejercicio',
     author: 'Dr. Juan Pérez',
-    image: 'https://images.unsplash.com/photo-1584735935639-b54921539c91?q=80&w=1974&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop', // Reemplazada
   },
   {
     id: '3',
     title: 'Mentalidad de Campeón',
     author: 'Sofía Marín',
-    image: 'https://images.unsplash.com/photo-1598625472494-c8661469a8da?q=80&w=1974&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1562576394-35d67a0b7d7e?q=80&w=1974&auto=format&fit=crop', // Reemplazada
   },
 ];
 
@@ -29,7 +29,7 @@ const recommendedBooks = [
     id: '4',
     title: 'Cocina Saludable para Atletas',
     author: 'Carlos Luna',
-    image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17021?q=80&w=2053&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1506280133573-222c7868d562?q=80&w=1974&auto=format&fit=crop', // Reemplazada
     price: 19.99,
   },
   {
@@ -43,7 +43,7 @@ const recommendedBooks = [
 
 export default function BooksScreen() {
   return (
-    <ScrollView className="flex-1 bg-white pt-16">
+    <ScrollView className="flex-1 bg-red-squat pt-16">
       <View className="px-6">
         <Text className="text-3xl font-bold text-lisbon-brown mb-6">Libros</Text>
 

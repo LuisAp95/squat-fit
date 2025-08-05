@@ -41,7 +41,7 @@ export default function CoursesScreen() {
   const router = useRouter();
 
   return (
-    <ScrollView className="flex-1 bg-white pt-16">
+    <ScrollView className="flex-1 bg-red-squat pt-16">
       <View className="px-6">
         <Text className="text-3xl font-bold text-lisbon-brown mb-6">Cursos</Text>
 

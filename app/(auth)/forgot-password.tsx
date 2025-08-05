@@ -23,10 +23,10 @@ export default function ForgotPassword() {
   };
 
   return (
-    <View className="flex-1 bg-white p-6 justify-center">
+    <View className="flex-1 bg-red-squat p-6 justify-center">
       <Pressable onPress={() => router.back()} className="absolute top-16 left-6 z-10">
         {/* Aquí podrías poner un icono de flecha hacia atrás */}
-        <Text className="text-blue-500 text-lg">Volver</Text>
+        <Text className="text-white text-lg">Volver</Text>
       </Pressable>
 
       <View className="items-center">
@@ -38,7 +38,7 @@ export default function ForgotPassword() {
       </View>
 
       <Text className="text-2xl font-bold mt-5">Recuperar contraseña</Text>
-      <Text className="text-sm text-dim-gray mt-2">Ingresa tu email para recibir un código de recuperación.</Text>
+      <Text className="text-sm text-white mt-2">Ingresa tu email para recibir un código de recuperación.</Text>
 
       <TextInput
         className="bg-input rounded-lg h-12 px-4 mt-7"
@@ -48,7 +48,7 @@ export default function ForgotPassword() {
       />
 
       <Pressable
-        className="bg-gradient-to-r from-purple-squat-1 to-purple-squat-2 rounded-lg h-12 justify-center items-center mt-8"
+        className="bg-purple-squat-1 rounded-lg h-12 justify-center items-center mt-8"
         onPress={handleRequestCode}
       >
         <Text className="text-white font-bold text-base">Solicitar código</Text>

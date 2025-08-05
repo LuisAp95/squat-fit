@@ -23,7 +23,7 @@ export const ListItem = ({ icon, title, href, isLast = false, onPress = null }) 
       onPress={handlePress}
     >
       <SvgXml xml={icon} width={24} height={24} />
-      <Text className="flex-1 ml-4 text-base text-lisbon-brown">{title}</Text>
+      <Text className="flex-1 ml-4 text-base text-white">{title}</Text>
       <SvgXml xml={chevronIcon} width={24} height={24} />
     </Pressable>
   );

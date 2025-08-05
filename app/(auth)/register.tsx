@@ -41,16 +41,18 @@ export default function Register() {
   };
 
   return (
-    <ScrollView className="flex-1 bg-white" contentContainerStyle={{ padding: 16, justifyContent: 'center' }}>
-      <View className="items-center mt-10">
-        <Image
-          source={require('../../assets/images/logo.png')}
-          className="w-32 h-32"
-          contentFit="contain"
-        />
+    <ScrollView className="flex-1 bg-red-squat" contentContainerStyle={{ padding: 16, justifyContent: 'center' }}>
+      <View className="items-center mt-10 ">
+        <View className="bg-white p-4 rounded-full w-fit">
+          <Image
+            source={require('../../assets/images/logo.png')}
+            style={{ width: 128, height: 128 }}
+            contentFit="contain"
+          />
+        </View>
       </View>
 
-      <Text className="text-2xl font-bold mt-5">Registro</Text>
+      <Text className="text-2xl text-black font-bold mt-5">Registro</Text>
 
       <TextInput
         className="bg-input rounded-lg h-12 px-4 mt-7"
@@ -75,7 +77,7 @@ export default function Register() {
       {error ? <Text className="text-red-500 text-xs mt-1">{error}</Text> : null}
 
       <Pressable
-        className="bg-gradient-to-r from-purple-squat-1 to-purple-squat-2 rounded-lg h-12 justify-center items-center mt-8"
+        className="bg-purple-squat-1 rounded-lg h-12 justify-center items-center mt-8"
         onPress={handleRegister}
       >
         <Text className="text-white font-bold text-base">Registrarse</Text>
@@ -87,7 +89,7 @@ export default function Register() {
         <View className="flex-1 h-px bg-black" />
       </View>
 
-      <Text className="text-center text-sm text-dim-gray">Regístrate con tus cuentas de</Text>
+      <Text className="text-center text-sm text-white">Regístrate con tus cuentas de</Text>
 
       <View className="flex-row justify-center items-center mt-5">
         <Pressable onPress={signIn}>
@@ -101,9 +103,9 @@ export default function Register() {
       </View>
 
       <Pressable className="mt-12 mb-5" onPress={() => router.push('/login')}>
-        <Text className="text-center text-dim-gray">
+        <Text className="text-center text-white">
           ¿Ya tienes una cuenta?{' '}
-          <Text className="text-orange font-bold">Inicia sesión.</Text>
+          <Text className="text-blue-squat-1 font-bold">Inicia sesión.</Text>
         </Text>
       </Pressable>
     </ScrollView>

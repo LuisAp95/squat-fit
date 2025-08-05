@@ -29,8 +29,8 @@ const myCoach = {
 const MyCoachView = ({ coach }) => (
   <View>
     <Text className="text-xl font-bold text-lisbon-brown mb-3">Mi Coach</Text>
-    <View className="bg-gray-100 rounded-xl p-4">
-      <Image source={{ uri: coach.image }} className="w-full h-64 rounded-lg" />
+    <View className="bg-white  rounded-xl p-4">
+      <Image source={{ uri: coach.image }} style={{ width: "100%", height: 256, borderRadius: 8 }} className="w-full h-64 rounded-lg" />
       <Text className="text-2xl font-bold mt-4">{coach.name}</Text>
       <Text className="text-base text-silver-gray mt-2">{coach.description}</Text>
       <Pressable className="bg-purple-squat-1 h-12 rounded-lg justify-center items-center mt-4">
@@ -57,7 +57,7 @@ export default function AdviceScreen() {
   const [hasCoach, setHasCoach] = useState(false);
 
   return (
-    <ScrollView className="flex-1 bg-white pt-16">
+    <ScrollView className="flex-1 bg-red-squat py-16">
       <View className="px-6">
         <View className="flex-row justify-between items-center mb-6">
           <Text className="text-3xl font-bold text-lisbon-brown">Asesoría</Text>

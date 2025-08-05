@@ -25,16 +25,18 @@ export default function Login() {
   const router = useRouter();
 
   return (
-    <View className="flex-1 bg-white p-4 justify-center">
-      <View className="items-center">
-        <Image
-          source={require('../../assets/images/logo.png')}
-          className="w-32 h-32"
-          contentFit="contain"
-        />
-      </View>
+    <View className="flex-1 bg-red-squat  p-4 justify-center">
+       <View className="items-center mt-10 ">
+              <View className="bg-white p-4 rounded-full w-fit">
+                <Image
+                  source={require('../../assets/images/logo.png')}
+                  style={{ width: 128, height: 128 }}
+                  contentFit="contain"
+                />
+              </View>
+            </View>
 
-      <Text className="text-2xl font-bold mt-5">Inicio de sesión</Text>
+      <Text className="text-2xl font-bold mt-5 text-black">Inicio de sesión</Text>
 
       <TextInput
         className="bg-input rounded-lg h-12 px-4 mt-7"
@@ -50,11 +52,11 @@ export default function Login() {
       />
       
       <Pressable className="mt-2 items-end" onPress={() => router.push('/forgot-password')}>
-        <Text className="text-xs text-dim-gray">¿Olvidaste tu contraseña?</Text>
+        <Text className="text-xs text-white font-bold">¿Olvidaste tu contraseña?</Text>
       </Pressable>
 
       <Pressable
-        className="bg-gradient-to-r from-purple-squat-1 to-purple-squat-2 rounded-lg h-12 justify-center items-center mt-8"
+        className="bg-purple-squat-1 rounded-lg h-12 justify-center items-center mt-8"
         onPress={signIn}
       >
         <Text className="text-white font-bold text-base">Acceder ahora</Text>
@@ -66,7 +68,7 @@ export default function Login() {
         <View className="flex-1 h-px bg-black" />
       </View>
 
-      <Text className="text-center text-sm text-dim-gray">Inicia sesión con tus cuentas de</Text>
+      <Text className="text-center text-sm text-white font-bold">Inicia sesión con tus cuentas de</Text>
 
       <View className="flex-row justify-center items-center mt-5">
         <Pressable onPress={signIn}>
@@ -80,9 +82,9 @@ export default function Login() {
       </View>
 
       <Pressable className="mt-12" onPress={() => router.push('/register')}>
-        <Text className="text-center text-dim-gray">
+        <Text className="text-center text-white">
           ¿Aún no tienes una cuenta?{' '}
-          <Text className="text-orange font-bold">Regístrate</Text>
+          <Text className="text-blue-squat-1 font-bold">Regístrate</Text>
         </Text>
       </Pressable>
     </View>
