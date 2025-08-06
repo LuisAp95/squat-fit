@@ -56,7 +56,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const signIn = () => {
     // Lógica de inicio de sesión (simulada)
-    setUser({ id: '1', name: 'Johan' });
+    setUser({ id: '1', name: 'Hamlet' });
   };
 
   const signOut = () => {

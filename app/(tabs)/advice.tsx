@@ -28,11 +28,11 @@ const myCoach = {
 // Vista para cuando el usuario ya tiene un coach
 const MyCoachView = ({ coach }) => (
   <View>
-    <Text className="text-xl font-bold text-lisbon-brown mb-3">Mi Coach</Text>
-    <View className="bg-white  rounded-xl p-4">
+    <Text className="text-xl font-bold text-purple-1 mb-3">Mi Coach</Text>
+    <View className="bg-red-squat  rounded-xl p-4">
       <Image source={{ uri: coach.image }} style={{ width: "100%", height: 256, borderRadius: 8 }} className="w-full h-64 rounded-lg" />
-      <Text className="text-2xl font-bold mt-4">{coach.name}</Text>
-      <Text className="text-base text-silver-gray mt-2">{coach.description}</Text>
+      <Text className="text-2xl text-white font-bold mt-4">{coach.name}</Text>
+      <Text className="text-base text-black mt-2">{coach.description}</Text>
       <Pressable className="bg-purple-squat-1 h-12 rounded-lg justify-center items-center mt-4">
         <Text className="text-white font-bold">Ver plan</Text>
       </Pressable>
@@ -46,7 +46,7 @@ const MyCoachView = ({ coach }) => (
 // Vista para cuando el usuario necesita elegir un coach
 const AdvisorListView = ({ advisors }) => (
   <View>
-    <Text className="text-xl font-bold text-lisbon-brown mb-3">Asesores Disponibles</Text>
+    <Text className="text-xl font-bold text-purple-squat-1 mb-3">Asesores Disponibles</Text>
     {advisors.map(advisor => (
       <AdvisorCard key={advisor.id} advisor={advisor} />
     ))}
@@ -57,10 +57,10 @@ export default function AdviceScreen() {
   const [hasCoach, setHasCoach] = useState(false);
 
   return (
-    <ScrollView className="flex-1 bg-red-squat py-16">
+    <ScrollView className="flex-1 bg-white py-16">
       <View className="px-6">
         <View className="flex-row justify-between items-center mb-6">
-          <Text className="text-3xl font-bold text-lisbon-brown">Asesoría</Text>
+          <Text className="text-3xl font-bold text-red-squat">Asesoría</Text>
           {/* Interruptor para simular el cambio de estado */}
           <Switch value={hasCoach} onValueChange={setHasCoach} />
         </View>
