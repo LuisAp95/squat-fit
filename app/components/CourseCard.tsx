@@ -8,19 +8,19 @@ export const CourseCard = ({ course, isPurchased = false }) => {
 
   return (
     <Pressable 
-      className="flex-row bg-white rounded-lg overflow-hidden mb-4" 
+      className="flex-row bg-river rounded-lg overflow-hidden mb-4" 
       onPress={() => router.push(`/course/${course.id}`)} // Navegación a detalle del curso
     >
       <Image source={{ uri: course.image }}  style={{ width: 100, height: 100, borderRadius: 5 }} />
       <View className="flex-1 p-3 justify-between">
         <View>
           <Text className="font-bold text-base text-red-squat">{course.title}</Text>
-          <Text className="text-sm text-lisbon-brown mt-1">Por {course.author}</Text>
+          <Text className="text-sm text-black mt-1">Por {course.author}</Text>
         </View>
         {isPurchased ? (
           <Text className="font-bold text-purple-squat-1">Adquirido</Text>
         ) : (
-          <Text className="font-bold text-lg text-purple-squat-1">${course.price}</Text>
+          <Text className="font-bold text-lg text-red-squat">${course.price}</Text>
         )}
       </View>
     </Pressable>
